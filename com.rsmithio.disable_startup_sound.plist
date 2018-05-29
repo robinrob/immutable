@@ -5,7 +5,7 @@
     <key>Label</key>
     <string>com.rsmithio.disable_startup_sound</string>
     <key>Program</key>
-    <string>/Users/robin/.disable_startup_sound.zsh</string>
+    <string>/Users/username/.disable_startup_sound.zsh</string>
     <key>RunAtLoad</key>
     <true/>
   </dict>

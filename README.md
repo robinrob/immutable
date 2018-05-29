@@ -13,10 +13,9 @@ osascript -e "set Volume 5"
 where possible values are from 0 to 10.
 
 ## Installation
-- Open the file `com.rsmithio.disable_startup_sound.plist` and configure the following line, replacing `robin` with your username: `<string>/Users/robin/.disable_startup_sound.zsh</string>`
-- Run `install_startup_sound_script.zsh` to copy the launch daemon plist and script files into the correct locations
+- Run `install_startup_sound_script.zsh` to configure and copy the launch daemon plist and script files into the correct locations
 - Log out then back in or restart. The daemon should now be running. You can check by running: `ps aux | grep disable_startup_sound`
-- On next startup the startup sound should be gone!
+- On *next* startup the startup sound should be gone!
 
 ## Debugging
 You can manually attempt to launch the launchd daemon like so:
