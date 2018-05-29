@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Label</key>
+		<string>com.rsmithio.disable_startup_sound</string>
+		<key>Program</key>
+		<string>/Users/robin/.disable_startup_sound.zsh</string>
+		<key>RunAtLoad</key>
+		<true/>
+	</dict>
+</plist>
