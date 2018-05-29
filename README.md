@@ -1,7 +1,7 @@
 # Disable OS X Startup Sound
 You can disable the OS X startup sound using the scripts in this project.
 
-It uses a launch daemon ([launchd](http://www.launchd.info/) which runs on startup, and listens for the `SIGTERM` shutdown signal. When this signal is received, the daemon sets the system volume to 0. Therefore on the next startup your mac should not make the annoying startup sound/chime.
+It uses a [launchd](http://www.launchd.info/) daemon which runs on startup, and listens for the `SIGTERM` shutdown signal. When this signal is received, the daemon sets the system volume to 0. Therefore on the next startup your mac should not make the annoying startup sound/chime.
 
 This solution therefore just automates the existing manual method of reducing your volume to zero before shutdown/restart. It also means that your volume will be set to 0 on each startup. You 
 can fix this by simply adding a line to the top of `disable_startup_sound.zsh` like:
