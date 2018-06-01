@@ -2,27 +2,17 @@
 
 trap set_volume_to_0 SIGTERM SIGINT
 
-local +r LogFilePath=$HOME/.disable_startup_sound/disable_startup_sound.log
-
-function init_log_file {
-    if ! [[ -f $HOME/.disable_startup_sound/disable_startup_sound.log ]]
-    then
-        touch $LogFilePath
-    fi
-}
+local +r DaemonScriptDir=$HOME/.disable_startup_sound
 
 function set_volume_to_0 {
-    init_log_file
-    osascript -e "set Volume 0"
-    print "Attempted system audio silence at: $(date '+%Y-%m-%d_%H:%M:%S')" >> $LogFilePath
+    $DaemonScriptDir/set_volume_to_0.zsh
 
     if [[ $DEBUG_MODE ]]
     then
         $HOME/.disable_startup_sound/alert.applescript
     fi
+
+    exit 0
 }
 
-while true
-do
-  # listen ...
-done
+sleep 10000000000000000

@@ -16,7 +16,8 @@ local +r DaemonScriptPath=$DaemonScriptDir/disable_startup_sound.zsh
 
 print "Copying daemon script into home directory to make it easy to reference from plist file: $DaemonScriptPath\n"
 mkdir $DaemonScriptDir || exit 1
-cp $ProjectRoot/disable_startup_sound.zsh $DaemonScriptPath || exit 1
+cp $ProjectRoot/disable_startup_sound.zsh $DaemonScriptDir || exit 1
+cp $ProjectRoot/set_volume_to_0.zsh $DaemonScriptDir || exit 1
 
 local +r AlertScriptPath=$DaemonScriptDir/alert.applescript
 print "Copying alert script to: $AlertScriptPath\n"
@@ -29,3 +30,5 @@ print "Starting launch daemon: com.rsmithio.disable_startup_sound\n"
 launchctl start com.rsmithio.disable_startup_sound || exit 1
 
 print "Done! Restart and the startup sound should be gone."
+
+touch $DaemonScriptDir/disable_startup_sound.log
